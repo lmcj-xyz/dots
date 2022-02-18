@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# PATH
+export PATH=/home/lmcj/.local/bin:$PATH
+
 # Prompt
 PS1="\[\[\e[1;35m\]\W \[\e[1;32m\]: \[\e[m\]"
 
@@ -18,6 +21,10 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Colors in ls
 alias ls="ls --color=auto"
+
+# Verbose things
+alias cp="cp -v"
+alias mv="mv -v"
 
 # Default programs
 # Text editor
@@ -53,8 +60,11 @@ alias trash-put="trash-put -v"
 # vi mode
 set -o vi
 
+# vimwiki
+alias wiki="nvim -c VimwikiIndex"
+
 # XSecureLock configuration
-export XSECURELOCK_SAVER=saver_blank
+export XSECURELOCK_SAVER=saver_xscreensaver
 
 # Track the dots
 alias dot="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
