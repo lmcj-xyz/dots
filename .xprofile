@@ -7,7 +7,7 @@ xbindkeys &
 # Hide the cursor
 unclutter --timeout 5 &
 # xss-lock configuration
-## Dim screen after 5 mins and lock 5 seconds after that
-xset s 300 5 &
+## Dim screen after 10 mins and lock 100 seconds after that
+xset s 600 100 &
 ## Trigger xss-lock with systemd events using xsecurelock
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &

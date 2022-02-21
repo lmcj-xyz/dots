@@ -61,10 +61,10 @@ alias trash-put="trash-put -v"
 set -o vi
 
 # vimwiki
-alias wiki="nvim -c VimwikiIndex"
+alias wiki="cd ~/Repositorios/wiki && nvim -c VimwikiIndex"
 
 # XSecureLock configuration
-export XSECURELOCK_SAVER=saver_xscreensaver
+export XSECURELOCK_SAVER=saver_blank xsecurelock
 
 # Track the dots
 alias dot="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
