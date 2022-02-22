@@ -11,3 +11,7 @@ unclutter --timeout 5 &
 xset s 600 100 &
 ## Trigger xss-lock with systemd events using xsecurelock
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
+# Remap for left-handed mouse
+xmodmap ~/.config/mouseconfig
+# Run autorandr
+autorandr --change
