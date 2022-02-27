@@ -38,7 +38,7 @@ export BROWSER="/usr/bin/firefox"
 # Document reader
 export READER="/usr/bin/zathura"
 # File browser
-export FILE_BROWSER="/usr/bin/nnn"
+export FILE_BROWSER="/usr/bin/pcmanfm"
 
 # nnn configuration
 export NNN_OPENER="xdg-open"
