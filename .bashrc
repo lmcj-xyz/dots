@@ -61,7 +61,7 @@ alias trash-put="trash-put -v"
 set -o vi
 
 # vimwiki
-alias wiki="cd ~/Repositorios/wiki && nvim -c VimwikiIndex"
+alias wiki="cd ~/Repositorios/wiki && nvim -c WikiIndex"
 
 # XSecureLock configuration
 export XSECURELOCK_SAVER=saver_blank xsecurelock
