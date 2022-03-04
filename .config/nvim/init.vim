@@ -19,6 +19,14 @@ let g:wiki_root='~/Repositorios/wiki'
 let g:wiki_filetypes = ['md']
 let g:wiki_link_extension='.md'
 let g:wiki_link_target_type='md'
+let g:wiki_export = {
+			\ 'args' : '',
+			\ 'from_format' : 'markdown',
+			\ 'ext' : 'html',
+			\ 'link_ext_replace': v:false,
+			\ 'view' : v:false,
+			\ 'output': fnamemodify(tempname(), ':h'),
+			\}
 
 " waikiki config
 let g:waikiki_roots=['~/Repositorios/wiki/']
