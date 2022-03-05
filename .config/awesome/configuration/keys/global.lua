@@ -125,6 +125,28 @@ globalKeys = gears.table.join(
     end,
     {description = "restore minimized", group = "client"}),
     
+    -- volume
+    awful.key({ }, "XF86AudioRaiseVolume",
+        function ()
+            os.execute(string.format("pactl set-sink-volume @DEFAULT_SINK@ +1000"))--, beautiful.volume.channel))
+            --beautiful.volume.update()
+        end,
+        {description = "volume up", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioLowerVolume",
+        function ()
+            os.execute(string.format("pactl set-sink-volume @DEFAULT_SINK@ -1000"))--, beautiful.volume.channel))
+            --beautiful.volume.update()
+        end,
+        {description = "volume down", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioMute",
+        function ()
+            os.execute(string.format("pactl set-sink-mute @DEFAULT_SINK@ toggle"))--, beautiful.volume.togglechannel or beautiful.volume.channel))
+            --beautiful.volume.update()
+        end,
+        {description = "toggle mute", group = "hotkeys"}),
+
   -- dmenu
   awful.key({ modkey }, "p",
     function ()
