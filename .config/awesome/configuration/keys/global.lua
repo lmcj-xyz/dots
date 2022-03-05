@@ -12,8 +12,8 @@ local apps = require('configuration.apps')
 
 -- {{{ Key bindings
 globalKeys = gears.table.join(
-  awful.key({ "Control",           }, "space", function() naughty.destroy_all_notifications() end,
-              {description = "destroy all notifications", group = "hotkeys"}),
+--  awful.key({ "Control",           }, "space", function() naughty.destroy_all_notifications() end,
+--              {description = "destroy all notifications", group = "hotkeys"}),
   awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
     {description="show help", group="awesome"}),
 

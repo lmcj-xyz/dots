@@ -57,6 +57,9 @@ alias rm="rm -iv"
 alias trash="trash -v"
 alias trash-put="trash-put -v"
 
+# Netrw
+alias netrw="nvim -c Explore"
+
 # vi mode
 set -o vi
 
