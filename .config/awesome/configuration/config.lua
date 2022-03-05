@@ -1,5 +1,6 @@
 local dpi = require("beautiful.xresources").apply_dpi
 local awful = require('awful')
+local naughty = require('naughty')
 
 -- vw/vh are used when you want certain elements to scale nicely/the same on all monitors/resolutions.
 -- 1 vw unit = Relative to 1% of the width of the screen it is targetting
@@ -23,7 +24,6 @@ local configuration = {
 
   -- Width of the top panel
   toppanel_height      = dpi(20),
-
 }
 
 return configuration
