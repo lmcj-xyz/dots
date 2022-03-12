@@ -6,7 +6,14 @@ return {
   run_on_start_up = {
 
     -- 'picom --config ' .. filesystem.get_configuration_dir() .. 'configuration/picom.conf',
-    -- 'nm-applet --indicator', -- wifi
+    'nm-applet --indicator', -- wifi
+    'udiskie -s', -- usb things
+    'unclutter --timeout 5', -- hide cursor
+    -- xss-lock config
+    'xset s 600 100',
+    'xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock ',
+    'xmodmap ~/.config/mouseconfig', -- lefthand mouse
+    'autorandr --change', -- autorandr
     --'blueberry-tray', -- Bluetooth tray icon
     --'xfce4-power-manager', -- Power manager
     --'numlockx on', -- enable numlock

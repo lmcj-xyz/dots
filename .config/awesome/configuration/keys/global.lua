@@ -126,6 +126,13 @@ globalKeys = gears.table.join(
     {description = "restore minimized", group = "client"}),
     
     -- volume
+    awful.key({ }, "XF86AudioMicMute",
+        function ()
+            os.execute(string.format("pactl set-source-mute @DEFAULT_SOURCE@ toggle"))--, beautiful.volume.channel))
+            --beautiful.volume.update()
+        end,
+        {description = "mute microphone", group = "hotkeys"}),
+
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
             os.execute(string.format("pactl set-sink-volume @DEFAULT_SINK@ +1000"))--, beautiful.volume.channel))
@@ -146,6 +153,52 @@ globalKeys = gears.table.join(
             --beautiful.volume.update()
         end,
         {description = "toggle mute", group = "hotkeys"}),
+
+
+    awful.key({ }, "Print",
+        function ()
+            os.execute(string.format("flameshot gui"))
+        end,
+        {description = "screenshot", group = "hotkeys"}),
+
+    awful.key({ }, "XF86ScreenSaver",
+        function ()
+            os.execute(string.format("xsecurelock"))
+        end,
+        {description = "screen saver", group = "hotkeys"}),
+
+    awful.key({ }, "XF86Display",
+        function ()
+            os.execute(string.format("arandr"))
+        end,
+        {description = "screen configuration with arandr", group = "hotkeys"}),
+
+  -- playerctl
+
+    awful.key({ }, "XF86AudioPlay",
+        function ()
+            os.execute(string.format("playerctl play-pause"))
+        end,
+        {description = "play/pause media player", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioStop",
+        function ()
+            os.execute(string.format("playerctl stop"))
+        end,
+        {description = "stop media player", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioNext",
+        function ()
+            os.execute(string.format("playerctl next"))
+        end,
+        {description = "next track media player", group = "hotkeys"}),
+
+    awful.key({ }, "XF86AudioPrev",
+        function ()
+            os.execute(string.format("playerctl previous"))
+        end,
+        {description = "previous track media player", group = "hotkeys"}),
+
 
   -- dmenu
   awful.key({ modkey }, "p",
