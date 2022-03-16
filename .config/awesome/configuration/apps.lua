@@ -4,7 +4,7 @@ local menubar = require("menubar")
 apps = {
 
   -- Your default terminal
-  terminal        = "urxvt",
+  terminal        = "st",
 
   -- Your default text editor
   editor          = os.getenv("EDITOR") or "nvim",

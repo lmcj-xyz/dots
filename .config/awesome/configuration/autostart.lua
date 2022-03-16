@@ -14,6 +14,7 @@ return {
     'xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock ',
     'xmodmap ~/.config/mouseconfig', -- lefthand mouse
     'autorandr --change', -- autorandr
+    'setxkbmap -model thinkpad -layout us,gb -variant intl,extd -option grp:alt_space_toggle', -- keyboard configuration (this is instead of having it in 00-keyboard.conf
     --'blueberry-tray', -- Bluetooth tray icon
     --'xfce4-power-manager', -- Power manager
     --'numlockx on', -- enable numlock
